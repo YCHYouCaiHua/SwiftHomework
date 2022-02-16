@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SwiftHomework_ZWCApp: App {
+    let appStore = HMAppstore()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(appStore: appStore)
         }
     }
 }

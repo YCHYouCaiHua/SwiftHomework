@@ -18,6 +18,10 @@
 		F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */; };
 		F9A5AA5227BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */; };
 		F9A5AA5427BCFA5500BE6787 /* HMRefreshState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */; };
+		F9EDAADB27BD345C003C1E5E /* HMCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDAADA27BD345C003C1E5E /* HMCellContentView.swift */; };
+		F9EDAADD27BD347B003C1E5E /* HMDataErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDAADC27BD347B003C1E5E /* HMDataErrorView.swift */; };
+		F9EDAADF27BD3535003C1E5E /* HMPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDAADE27BD3535003C1E5E /* HMPullToRefreshView.swift */; };
+		F9EDAAE227BD368A003C1E5E /* HMAppstore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EDAAE127BD368A003C1E5E /* HMAppstore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMApplication.swift; sourceTree = "<group>"; };
 		F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshHeaderFooterView.swift; sourceTree = "<group>"; };
 		F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshState.swift; sourceTree = "<group>"; };
+		F9EDAADA27BD345C003C1E5E /* HMCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCellContentView.swift; sourceTree = "<group>"; };
+		F9EDAADC27BD347B003C1E5E /* HMDataErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDataErrorView.swift; sourceTree = "<group>"; };
+		F9EDAADE27BD3535003C1E5E /* HMPullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPullToRefreshView.swift; sourceTree = "<group>"; };
+		F9EDAAE127BD368A003C1E5E /* HMAppstore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAppstore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,8 @@
 		F9A5AA1C27BCF81100BE6787 /* SwiftHomework-ZWC */ = {
 			isa = PBXGroup;
 			children = (
+				F9EDAAE027BD3614003C1E5E /* ViewModels */,
+				F9EDAAD927BD344F003C1E5E /* Views */,
 				F9A5AA5027BCFA1A00BE6787 /* RefrashView */,
 				F9A5AA4D27BCF93100BE6787 /* Models */,
 				F9A5AA4A27BCF8FE00BE6787 /* Network */,
@@ -159,8 +169,26 @@
 			children = (
 				F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */,
 				F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */,
+				F9EDAADE27BD3535003C1E5E /* HMPullToRefreshView.swift */,
 			);
 			path = RefrashView;
+			sourceTree = "<group>";
+		};
+		F9EDAAD927BD344F003C1E5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9EDAADA27BD345C003C1E5E /* HMCellContentView.swift */,
+				F9EDAADC27BD347B003C1E5E /* HMDataErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9EDAAE027BD3614003C1E5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F9EDAAE127BD368A003C1E5E /* HMAppstore.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +323,11 @@
 			files = (
 				F9A5AA5427BCFA5500BE6787 /* HMRefreshState.swift in Sources */,
 				F9A5AA2027BCF81100BE6787 /* ContentView.swift in Sources */,
+				F9EDAAE227BD368A003C1E5E /* HMAppstore.swift in Sources */,
 				F9A5AA1E27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift in Sources */,
+				F9EDAADB27BD345C003C1E5E /* HMCellContentView.swift in Sources */,
+				F9EDAADD27BD347B003C1E5E /* HMDataErrorView.swift in Sources */,
+				F9EDAADF27BD3535003C1E5E /* HMPullToRefreshView.swift in Sources */,
 				F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */,
 				F9A5AA5227BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift in Sources */,
 				F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */,
