@@ -14,6 +14,8 @@
 		F9A5AA2F27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA2E27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift */; };
 		F9A5AA3927BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA3827BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift */; };
 		F9A5AA3B27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */; };
+		F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4B27BCF91900BE6787 /* Network.swift */; };
+		F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		F9A5AA3427BCF81400BE6787 /* SwiftHomework-ZWCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftHomework-ZWCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A5AA3827BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCUITests.swift; sourceTree = "<group>"; };
 		F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9A5AA4B27BCF91900BE6787 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		F9A5AA1C27BCF81100BE6787 /* SwiftHomework-ZWC */ = {
 			isa = PBXGroup;
 			children = (
+				F9A5AA4D27BCF93100BE6787 /* Models */,
+				F9A5AA4A27BCF8FE00BE6787 /* Network */,
 				F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */,
 				F9A5AA1F27BCF81100BE6787 /* ContentView.swift */,
 				F9A5AA2127BCF81400BE6787 /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */,
 			);
 			path = "SwiftHomework-ZWCUITests";
+			sourceTree = "<group>";
+		};
+		F9A5AA4A27BCF8FE00BE6787 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9A5AA4B27BCF91900BE6787 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F9A5AA4D27BCF93100BE6787 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +281,8 @@
 			files = (
 				F9A5AA2027BCF81100BE6787 /* ContentView.swift in Sources */,
 				F9A5AA1E27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift in Sources */,
+				F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */,
+				F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
