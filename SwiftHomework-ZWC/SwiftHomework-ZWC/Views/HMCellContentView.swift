@@ -21,13 +21,13 @@ struct CellContentView: View {
     @State var appIconStates: AppIconStatus = .failure
     
     var body: some View {
-        HStack {
-            appiconView.onAppear {
-                fetchImageData(withImageUrl: app.artworkUrl512)
-            }
-            
+        
+        ZStack {
             HStack {
-                VStack(alignment:.leading, spacing: 6) {
+                appiconView.onAppear {
+                    fetchImageData(withImageUrl: app.artworkUrl512)
+                }
+                VStack(alignment: .leading) {
                     Text(app.trackName)
                         .font(.system(size: 15, weight: .bold))
                         .frame(alignment: .leading)
@@ -37,25 +37,31 @@ struct CellContentView: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                 }
+                .padding([.top, .bottom])
                 Spacer()
             }
-            .padding()
+            .padding(.trailing, 50)
             
-            Button {
-                withAnimation {
-                    app.isCollected = !app.isCollected
-                    app.collectImageName = app.isCollected ? "icon002" : "icon001"
-                    collectIconSize = app.isCollected ? 40 : 30
+            HStack {
+                Spacer()
+                Button {
+                    withAnimation {
+                        app.isCollected = !app.isCollected
+                        app.collectImageName = app.isCollected ? "icon002" : "icon001"
+                        collectIconSize = app.isCollected ? 40 : 30
+                    }
+                } label: {
+                    Image(app.collectImageName)
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fit)
+                        .frame(width: collectIconSize, height: collectIconSize)
+                    
                 }
-            } label: {
-                Image(app.collectImageName)
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fit)
-                    .frame(width: collectIconSize, height: collectIconSize)
-            }.padding(.trailing)
+                .padding(.trailing, 15)
+            }
         }
         .background(Color.white)
-        .padding(0)
+        .clipped()
         .cornerRadius(8)
     }
     
