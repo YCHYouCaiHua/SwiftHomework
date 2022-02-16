@@ -16,6 +16,8 @@
 		F9A5AA3B27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */; };
 		F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4B27BCF91900BE6787 /* Network.swift */; };
 		F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */; };
+		F9A5AA5227BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */; };
+		F9A5AA5427BCFA5500BE6787 /* HMRefreshState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F9A5AA4B27BCF91900BE6787 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMApplication.swift; sourceTree = "<group>"; };
+		F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshHeaderFooterView.swift; sourceTree = "<group>"; };
+		F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		F9A5AA1C27BCF81100BE6787 /* SwiftHomework-ZWC */ = {
 			isa = PBXGroup;
 			children = (
+				F9A5AA5027BCFA1A00BE6787 /* RefrashView */,
 				F9A5AA4D27BCF93100BE6787 /* Models */,
 				F9A5AA4A27BCF8FE00BE6787 /* Network */,
 				F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */,
@@ -147,6 +152,15 @@
 				F9A5AA4E27BCF94000BE6787 /* HMApplication.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F9A5AA5027BCFA1A00BE6787 /* RefrashView */ = {
+			isa = PBXGroup;
+			children = (
+				F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */,
+				F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */,
+			);
+			path = RefrashView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,9 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A5AA5427BCFA5500BE6787 /* HMRefreshState.swift in Sources */,
 				F9A5AA2027BCF81100BE6787 /* ContentView.swift in Sources */,
 				F9A5AA1E27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift in Sources */,
 				F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */,
+				F9A5AA5227BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift in Sources */,
 				F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
