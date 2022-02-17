@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F967A90427BDDC0100A66D6C /* HMRefreshViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967A90327BDDC0100A66D6C /* HMRefreshViewModifier.swift */; };
+		F967A90827BDE02800A66D6C /* HMAppstoreTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967A90727BDE02800A66D6C /* HMAppstoreTestCase.swift */; };
 		F9A5AA1E27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */; };
 		F9A5AA2027BCF81100BE6787 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA1F27BCF81100BE6787 /* ContentView.swift */; };
 		F9A5AA2227BCF81400BE6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A5AA2127BCF81400BE6787 /* Assets.xcassets */; };
 		F9A5AA2527BCF81400BE6787 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A5AA2427BCF81400BE6787 /* Preview Assets.xcassets */; };
-		F9A5AA2F27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA2E27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift */; };
 		F9A5AA3927BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA3827BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift */; };
 		F9A5AA3B27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */; };
 		F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA4B27BCF91900BE6787 /* Network.swift */; };
@@ -44,13 +44,13 @@
 
 /* Begin PBXFileReference section */
 		F967A90327BDDC0100A66D6C /* HMRefreshViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshViewModifier.swift; sourceTree = "<group>"; };
+		F967A90727BDE02800A66D6C /* HMAppstoreTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAppstoreTestCase.swift; sourceTree = "<group>"; };
 		F9A5AA1A27BCF81100BE6787 /* SwiftHomework-ZWC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftHomework-ZWC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCApp.swift; sourceTree = "<group>"; };
 		F9A5AA1F27BCF81100BE6787 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9A5AA2127BCF81400BE6787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9A5AA2427BCF81400BE6787 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9A5AA2A27BCF81400BE6787 /* SwiftHomework-ZWCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftHomework-ZWCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9A5AA2E27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCTests.swift; sourceTree = "<group>"; };
 		F9A5AA3427BCF81400BE6787 /* SwiftHomework-ZWCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftHomework-ZWCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A5AA3827BCF81400BE6787 /* SwiftHomework_ZWCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCUITests.swift; sourceTree = "<group>"; };
 		F9A5AA3A27BCF81400BE6787 /* SwiftHomework_ZWCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		F9A5AA2D27BCF81400BE6787 /* SwiftHomework-ZWCTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9A5AA2E27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift */,
+				F967A90727BDE02800A66D6C /* HMAppstoreTestCase.swift */,
 			);
 			path = "SwiftHomework-ZWCTests";
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9A5AA2F27BCF81400BE6787 /* SwiftHomework_ZWCTests.swift in Sources */,
+				F967A90827BDE02800A66D6C /* HMAppstoreTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
