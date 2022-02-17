@@ -35,8 +35,28 @@ extension ContentView {
                 }
             }
         }
+        .addPullToRefresh(isHeaderRefreshing: $headerRefreshing, onHeaderRefresh: reloadData, isFooterRefreshing: $footerRefreshing, onFooterRefresh: loadMore,isHaveMoreData: $appStore.isHaveMoreData)
         .navigationTitle("App")
         .background(Color(red: 244/255, green: 243/255, blue: 247/255))
+    }
+}
+
+// MARK: - Private methonds
+extension ContentView {
+    
+    private func reloadData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            appStore.refrashApplicationList()
+            headerRefreshing = false
+            footerRefreshing = false
+        }
+    }
+    
+    private func loadMore() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            appStore.fetchNextPageData()
+            footerRefreshing = false
+        }
     }
 }
 

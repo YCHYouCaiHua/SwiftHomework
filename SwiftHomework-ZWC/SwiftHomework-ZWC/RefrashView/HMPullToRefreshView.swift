@@ -29,6 +29,7 @@ extension PullToRefreshView: View where Header: View, Content: View, Footer: Vie
     var body: some View {
         VStack(spacing: 0) {
             header
+                .opacity(dynamicHeaderOpacity)
                 .frame(maxWidth: .infinity)
                 .anchorPreference(key: HeaderBoundsPreferenceKey.self, value: .bounds, transform: {
                     [.init(bounds: $0)]
@@ -40,10 +41,49 @@ extension PullToRefreshView: View where Header: View, Content: View, Footer: Vie
                 })
             
             footer
+                .opacity(dynamicFooterOpacity)
                 .frame(maxWidth: .infinity)
                 .anchorPreference(key: FooterBoundsPreferenceKey.self, value: .bounds, transform: {
                     [.init(bounds: $0)]
                 })
+        }
+        .padding(.top, dynamicHeaderPadding)
+        .padding(.bottom, dynamicFooterPadding)
+    }
+    
+    var dynamicHeaderOpacity: Double {
+        if headerRefreshData.refreshState == .invalid {
+            return 0.0
+        }
+        if headerRefreshData.refreshState == .stopped {
+            return headerRefreshData.progress
+        }
+        return 1.0
+    }
+    
+    var dynamicFooterOpacity: Double {
+        if footerRefreshData.refreshState == .invalid {
+            return 0.0
+        }
+        if footerRefreshData.refreshState == .stopped {
+            if isHaveMoreData {
+                return footerRefreshData.progress
+            } else {
+                return 1
+            }
+        }
+        return 1.0
+    }
+    
+    var dynamicHeaderPadding: CGFloat {
+        -headerRefreshData.threshold
+    }
+    
+    var dynamicFooterPadding: CGFloat {
+        if isHaveMoreData {
+            return (footerRefreshData.refreshState == .loading) ? 0.0 : -footerRefreshData.threshold
+        } else {
+            return 0
         }
     }
 }

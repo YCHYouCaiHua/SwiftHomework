@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F967A90427BDDC0100A66D6C /* HMRefreshViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967A90327BDDC0100A66D6C /* HMRefreshViewModifier.swift */; };
 		F9A5AA1E27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */; };
 		F9A5AA2027BCF81100BE6787 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5AA1F27BCF81100BE6787 /* ContentView.swift */; };
 		F9A5AA2227BCF81400BE6787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A5AA2127BCF81400BE6787 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F967A90327BDDC0100A66D6C /* HMRefreshViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRefreshViewModifier.swift; sourceTree = "<group>"; };
 		F9A5AA1A27BCF81100BE6787 /* SwiftHomework-ZWC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftHomework-ZWC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A5AA1D27BCF81100BE6787 /* SwiftHomework_ZWCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHomework_ZWCApp.swift; sourceTree = "<group>"; };
 		F9A5AA1F27BCF81100BE6787 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				F9A5AA5127BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift */,
 				F9A5AA5327BCFA5500BE6787 /* HMRefreshState.swift */,
+				F967A90327BDDC0100A66D6C /* HMRefreshViewModifier.swift */,
 				F9EDAADE27BD3535003C1E5E /* HMPullToRefreshView.swift */,
 			);
 			path = RefrashView;
@@ -331,6 +334,7 @@
 				F9A5AA4C27BCF91900BE6787 /* Network.swift in Sources */,
 				F9A5AA5227BCFA3900BE6787 /* HMRefreshHeaderFooterView.swift in Sources */,
 				F9A5AA4F27BCF94000BE6787 /* HMApplication.swift in Sources */,
+				F967A90427BDDC0100A66D6C /* HMRefreshViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
