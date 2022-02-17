@@ -173,7 +173,6 @@ extension PullToRefreshModifier {
         
         if footerRefreshData.refreshState == .stopped, isHaveMoreData {
             let progress = Double(contentOffset / bottomDistance)
-            print(progress)
             footerRefreshData.progress = (progress >= 1.0) ? 1.0 : progress
         } else {
             if contentOffset == 0 {
