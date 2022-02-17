@@ -13,7 +13,7 @@ class HMAppstore: ObservableObject {
         case failure
         case haveData
         case noData
-        case inProcession
+//        case inProcession
     }
     
     var applicationListRawValue: [HMApplication] {
@@ -24,7 +24,8 @@ class HMAppstore: ObservableObject {
     
     private var currentIndexPage: Int
     private let pageSize: Int = 10
-    private(set) var netWorkState: NetWorkState = .inProcession
+    @Published var netWorkState: NetWorkState = .noData
+    @Published var isRequestCompleted: Bool = true
     var isHaveMoreData: Bool
     @Published var applicationList: [HMApplication] = [HMApplication]()
     
@@ -40,10 +41,14 @@ class HMAppstore: ObservableObject {
 // MARK: - API
 extension HMAppstore {
     
+    func initializeData() {
+        initializeApplicationList()
+    }
+    
     func refrashApplicationList() {
         currentIndexPage = 1
         let fetchResult = getApplicationList(withPageIndex: currentIndexPage, andCount: pageSize)
-        isHaveMoreData = fetchResult.isHaveMoreData
+        isHaveMoreData = true
         currentIndexPage = fetchResult.nextPageIndex ?? 1
         applicationList = fetchResult.applicationList
     }
@@ -73,16 +78,16 @@ extension HMAppstore {
 }
 
 // MARK: - Network
-extension HMAppstore {
+private extension HMAppstore {
     
-    private func initializeApplicationList() {
-        netWorkState = .inProcession
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
+    func initializeApplicationList() {
+        isRequestCompleted = false
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
             Network.shared.fetchApplicationList { [weak self] isSuccess, response, error in
                 guard let self = self else {
                     return
                 }
-                
+                self.isRequestCompleted = true
                 guard isSuccess else {
                     print("\(error?.localizedDescription ?? "")")
                     self.netWorkState = .failure
@@ -100,7 +105,6 @@ extension HMAppstore {
                 } else {
                     self.netWorkState = .noData
                 }
-                
                 self.applicationListRawValue = applicationList
             }
         }

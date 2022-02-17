@@ -16,6 +16,11 @@ class Network {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else{
                 print("Request error: \(error!)")
+                if let callBack = callBack {
+                    DispatchQueue.main.async {
+                        callBack(false,nil,error)
+                    }
+                }
                 return
             }
             guard let response = response as? HTTPURLResponse else { return }
@@ -26,20 +31,29 @@ class Network {
                     do {
                         let decodedApplication = try JSONDecoder().decode(HMApplicationRequestResult.self, from: data)
                         if let callBack = callBack {
-                            callBack(true,decodedApplication.results,error)
+                            DispatchQueue.main.async {
+                                callBack(true,decodedApplication.results,error)
+                            }
                         }
                     } catch let error {
                         print("Error decoding: ", error)
                         if let callBack = callBack {
-                            callBack(false,nil,error)
+                            DispatchQueue.main.async {
+                                callBack(false,nil,error)
+                            }
                         }
                         
+                    }
+                }
+            } else {
+                if let callBack = callBack {
+                    DispatchQueue.main.async {
+                        callBack(false,nil,error)
                     }
                 }
             }
             
         }
         task.resume()
-        
     }
 }
